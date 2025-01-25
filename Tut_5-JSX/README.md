@@ -1,0 +1,1 @@
+- JSX stands for JavaScript XML which allows you to write HTML elements in JavaSript and place them in the DOM without createElement() and appendChild() method.

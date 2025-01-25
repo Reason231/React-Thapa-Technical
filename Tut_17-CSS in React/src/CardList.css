@@ -1,0 +1,4 @@
+/* This is applied to only local file (i.e. CardList.jsx) */
+.header{
+    grid-column: span 3;
+}

@@ -1,4 +1,4 @@
-## Event Propagatin (Bubbling and Capturing)
+## Event Propagation (Bubbling and Capturing)
 - Event Propagation refers to the process of how events travel through the DOM hierarchy. 
 - In JS, there are two phases of two event propagation i.e "capturing phase" and "bubbling phase"
 

@@ -28,7 +28,9 @@ export function EventPropagation(){
         {/* Bubbling Phase */}
         <div class="border-none bg-red-400 p-2 border-r-4 ml-20 inline-block">
             <div onClick={bubbleGrandParent}>
+                
                 <div onClick={bubbleParentClick}>
+                    {/* When you click on the childButton it automatically fires up the above div(parent and grandParent) */}
                     <button onClick={bubbleChildClick}>
                         Bubbling From the Event Propagation
                     </button>

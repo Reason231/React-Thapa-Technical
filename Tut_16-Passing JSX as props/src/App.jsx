@@ -6,6 +6,7 @@ export function App() {
         name="Alice"
         // The number should be in the curly bracket
         age={30}
+        // greeting is passed as a JSX prop
         greeting={
           <div>
             <strong>I am the inside JSX props</strong>

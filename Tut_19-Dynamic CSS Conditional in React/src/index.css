@@ -1,0 +1,8 @@
+/* This is the global css for all the files */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+    margin: 50px;
+}
+

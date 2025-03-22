@@ -25,6 +25,7 @@ const WelcomeUser=(props)=>{
 
     return (
         <>
+    <h1>This is the Event Props File</h1>
         {/* Yesle aaba mathi ko parentComponent(i.e. HandleWelcomeUser) ko WelcomeUser ko click props lai target garcha */}--
         <button onClick={props.ClickButton}  class="border-none bg-yellow-400 p-2 border-r-4 ml-20" >Click Me Event Props.jsx</button>
         <button onMouseEnter={props.Hover}  class="border-none bg-yellow-400 p-2 border-r-4 ml-20">Hover Event Props.jsx</button>

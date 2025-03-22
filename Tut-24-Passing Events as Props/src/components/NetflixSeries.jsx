@@ -9,6 +9,7 @@ function CardList() {
   return (
     <>
       <div className="container">
+        {/* Here we have imported CSS directly */}
         <h1 className={NetflixCSS.header}>List of Best Netflix Series</h1>
         {SeriesData.map((data) => (
           <CardData key={data.id} currData={data} />

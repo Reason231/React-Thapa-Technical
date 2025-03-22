@@ -1,4 +1,4 @@
-import {UseState} from "./1.useStateHook"
+import {UseState} from "./26.useStateHook"
 
 export function Hooks(){
     return(

@@ -12,6 +12,7 @@ export const EventHandling = () => {
 
   return (
     <>
+     <h1>This is the Event Handling File</h1>
       <button
         onClick={handleClick}
         class="border-none bg-blue-400 p-2 border-r-4 ml-14"
@@ -19,7 +20,7 @@ export const EventHandling = () => {
         I am Click Event Handler.jsx
       </button>
 
-      {/* Passing argument to a fuction by fat Arrow function*/}
+      {/* Passing argument to a function by fat Arrow function*/}
       <button
         onClick={() => handleWelcomeUser("Reason")}
         class="border-none bg-blue-400 p-2 border-r-4 ml-20"

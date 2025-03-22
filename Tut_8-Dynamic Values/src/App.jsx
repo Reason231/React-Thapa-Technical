@@ -1,8 +1,14 @@
+  export function DynamicUserInput(){
+    const number=Number(prompt("Write a number")) // This runs twice in development due to react double render
+    return(
+      <>
+      <h1>The dynamic number of user is {number}</h1>
+      </>
+    )
+  }
 
-
-
-  export function DynamicVaraibles(){
-    const name="Dynamic Varaible"
+  export function DynamicVariables(){
+    const name="Dynamic Varaibles"
     const example="Example 1"
     return (
       <>
@@ -37,5 +43,6 @@ export const DynamicFunctionCall=()=>{
     </>
   )
 }
+
 
 

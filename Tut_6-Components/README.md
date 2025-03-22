@@ -8,7 +8,7 @@
 ## Two ways to create components in Reat.js
 1. Class Based Components
 - A class-based component is defined using the class keyword and extends React.Component to gain access to React features.
-- search in chatgpt
+- search in chatgpt for interview
 
 2. Functional Components (IMP)
 - This is modern and recommended way of writing React.js components.

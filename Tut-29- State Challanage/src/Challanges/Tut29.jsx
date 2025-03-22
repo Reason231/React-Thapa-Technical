@@ -16,24 +16,26 @@ export const Tut29Challange = () => {
 
     return (
         // Through Loop
-        // <div>
-        //     <h1>User List</h1>
-        //     {users.map((studentList, index) => (
-        //         <div key={index}>
-        //             <p>Name: {studentList.name}</p>
-        //             <p>Age: {studentList.age}</p>
-        //         </div>
-        //     ))}
-        // </div>
+        <>
+        {/* <div>
+            <h1>User List</h1>
+            {users.map((studentList, index) => (
+                <div key={index}>
+                    <p>Name: {studentList.name}</p>
+                    <p>Age: {studentList.age}</p>
+                </div>
+            ))}
+        </div> */}
 
 
-        // Through useStateHook
+        {/* // Through useStateHook */}
         <div>
             <h1>User List</h1>
             <p>Name : {users[counter].name}</p>
             <p>Age: {users[counter].age}</p>
             <button onClick={looper} class="bg-slate-500" >Increase student List</button>
         </div>
+            </>
     );
 };
 

@@ -22,6 +22,7 @@ export const Todo = () => {
         }
 
         setTask((prevTask) => [...prevTask, inputValue]);
+        console.log(task)
         setInputValue(""); // Clear input field after adding
     };
 
@@ -39,6 +40,7 @@ export const Todo = () => {
                                 type="text"
                                 className="todo-input"
                                 autoComplete="off"
+                                // Each keystroke updates the input state, and value={input} ensures the input field reflects the new value also it is required for making empty input.
                                 value={inputValue}
                                 onChange={(event) => handleInputChange(event.target.value)}
                             />

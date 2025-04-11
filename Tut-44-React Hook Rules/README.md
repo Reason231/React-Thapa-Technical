@@ -1,3 +1,6 @@
+## Note
+- We haven't write any code
+
 ## React Hook Rules
 1. Hooks let you use different React features from your components.
 

@@ -4,16 +4,18 @@ export const StateManipulation = () => {
   const [task, setTask] = useState(["Task1", "Task2", "Task3"]);
 
   const handleAddTask = (addedTask) => {
-    setTask([...task, addedTask]);
+    setTask([...task,addedTask]);
   };
 
   const handleDeleteTask = (deletedTask) => {
-    setTask(task.filter((items) => items != deletedTask));
+    setTask(task.filter((items)=>(
+      items !==deletedTask
+    )))
   };
 
   const handleUpdateTask=(prevTask,updatedTask)=>{
     setTask(task.map((items)=> 
-    items == prevTask ? items = updatedTask : items = prevTask))
+    items == prevTask ? items = updatedTask : items))
   }
 
   return (

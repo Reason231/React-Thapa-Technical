@@ -1,32 +1,31 @@
-export const PokemonCard=({detailedData})=>{
-    return(
-        <>
-        {detailedData.map((currData,index)=>(
-            <div className="flex flex-wrap gap-6 pl-4" key={index}>
-     
-                 <div className="border-2 h-[35dvh] w-[25dvw] rounded-xl flex justify-center items-center flex-col gap-3">
-                     <figure className="h-22 w-22 border-2 p-2 bg-blue-200 rounded-md border-blue-50">
-                         <img src="../../public/vite.svg" alt="" className="h-18"/>
-                     </figure>
-                     <p>Name: {currData.name}</p>
-                     <button>Type: Grass, Postion</button>
-     
-                     <div className="flex gap-2">
-                         <p>Height: 24</p>
-                         <p>Weight:</p>
-                         <p>Speed: </p>
-                     </div>
-     
-                     <div className="flex">
-                         <p>Experience: </p>
-                         <p>Attack: </p>
-                         <p>Ability:</p>
-                     </div>
-                 </div>
-               
-             </div>
+export const PokemonCard = ({ tasks }) => {
+    // console.log(detailedTask)
+  return (
+    <>
+      {tasks.map((currData, index) => (
+        <div
+          className="border-2 w-[40dvw] h-[30dvh] flex justify-center items-center flex-col"
+          key={index}
+        >
+          <figure className="border-2 w-[20dvw] h-[10dvh]"></figure>
+          <div>
+            <p>{currData.name}</p>
+            <button>Type: grass, poison</button>
+          </div>
 
-        ))}
-        </>
-    )
-}
+          <div className="flex gap-2 w-[30dvw]">
+            <span>Height: 7</span>
+            <span>Weight: 69</span>
+            <span>Speed: 45</span>
+          </div>
+
+          <div className="flex gap-2 w-[30dvw]">
+            <span>Experience: 7</span>
+            <span>Attack: 69</span>
+            <span>Ability: 45</span>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+};

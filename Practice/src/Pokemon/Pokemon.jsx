@@ -1,52 +1,36 @@
 import { useEffect, useState } from "react"
 import { PokemonCard } from "./PokemonCard"
 
-export const Pokemon=()=>{
-    const API = "https://pokeapi.co/api/v2/pokemon?limit=30"
 
-    const [detailedData,setDetailedData]=useState([])
-    const [searchData,setSearchedData]=useState("")
+export const Pokemon =() =>{
+    const [detailedTask,setDetailedTask]=useState([])
 
     useEffect(()=>{
-        const fetchData=async()=>{
-            try{
-
-                const data=await fetch(API)
-                const res=await data.json()
-                // console.log(res)
-
-                const detailedResponse=res.results.map(async(currDetailedData)=>{
-                    const detailedDataUrl=currDetailedData.url
-                    const data=await fetch(detailedDataUrl)
-                    const res=await data.json()
-                    return res
-                })
+            const fetchAPI=async()=>{
+                const res=await fetch("https://pokeapi.co/api/v2/pokemon?limit=30")
+                const data=await res.json()
+                // console.log(data)
                 
-                const allDetailedData=await Promise.all(detailedResponse)
-                setDetailedData(allDetailedData)
-            }
-            catch(e){
-                console.log(e)
-            }
-        }
-        fetchData()
-    },[])
+                const detailedData=data.results.map(async(detailedData)=>{
+                    const res= await fetch (detailedData.url)
+                    const data=await res.json()
+                    return data
+                })
 
-    
-    console.log(detailedData)
+                const allDetailedData=await Promise.all(detailedData)
 
-    // Search functionality 
-        const searchedData=detailedData.filter((filteredData)=>{
-           return filteredData.name.toLowerCase().includes(searchData.toLowerCase())
-        })
-    
+                setDetailedTask(allDetailedData)
+            }
+            fetchAPI()
+        },[])
+
+        console.log(detailedTask)
     return(
         <>
-          <div className="bg-blue-100 min-h-screen flex flex-col items-center gap-4">
-            <h1 className="mt-4">Let's Catch Pokemon</h1>
-            <input type="text" placeholder="Enter Pokemon" className="border-3 rounded-md border-blue-500" onChange={(e)=>setSearchedData(e.target.value)} value={searchData}/>
-          <PokemonCard detailedData={searchedData}/>
-          </div>
+            <h1>Let's catch Pokemon</h1>
+            <input type="text" className="border-2" placeholder="Enter Pokemon"/>
+
+            <PokemonCard tasks={detailedTask}/>
         </>
     )
 }

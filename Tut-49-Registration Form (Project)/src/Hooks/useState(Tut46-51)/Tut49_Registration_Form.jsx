@@ -11,12 +11,12 @@ export const Registration = () => {
 
   const handleInputChange = (e) => {
     // Read the readme.md file for the tut48 inputHandling unOptimized code
-    const { name, value } = e.target;
-    // If the user enters the nameField then the "name" key will get the "firstName" from the inputField and checks in the state and updates the "firstName" with value dynamically.
-    console.log(name);
+    const { id, value } = e.target;
+    // If the user enters the nameField then the "id" key will get the "firstName" from the inputField and checks in the state and updates the "firstName" with value dynamically.
+    console.log(id);
     setUser((prev) => ({
        ...prev,
-       [name]: value  //Dynamic Keys update value. Eg:This will be { email: "value" }
+       [id]: value  //Dynamic Keys update value. Eg:This will be { email: "value" }
       })); 
   };
 

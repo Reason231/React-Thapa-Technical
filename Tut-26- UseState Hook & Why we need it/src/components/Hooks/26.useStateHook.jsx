@@ -15,7 +15,7 @@ export function UseState(){
 
     function handleEvenClick(){
         setNum(prevState=>({
-            ...prevState, // Keep existing same
+            ...prevState, // Keep existing same like odd,prime,and whole
             even:prevState.even + 2 // Update only "even"
         }))
     }

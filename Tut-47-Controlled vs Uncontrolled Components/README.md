@@ -29,6 +29,7 @@ value={inputValue} → Displays the current state value in the input field.
 - An uncontrolled component uses a "useRef" to get the value directly from the DOM. React does not control the value, and it’s more like how we do things in plain HTML/JS.
 
 This means:
+0. It is used for the file uploads
 1. Direct DOM Manipulation: The value of the input field is controlled by the DOM {document.getElementById,etc.}. It's not declarative way right.
 2. Event Handling: In uncontrolled components, events like onChange can still be used, but the changes won't immediately update the React state. Instead, any change happens directly on the DOM element itself. 
 3. Accessing Form Data: Form data is accessed through the "useRef".
